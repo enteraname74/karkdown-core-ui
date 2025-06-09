@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="karkdown-core-jvm-0.1.0">
-    <output-path>$PROJECT_DIR$/karkdown-core/build/libs</output-path>
-    <root id="archive" name="karkdown-core-jvm-0.1.0.jar">
-      <element id="module-output" name="karkdown-core-ui.karkdown-core.jvmMain" />
-    </root>
-  </artifact>
-</component>
