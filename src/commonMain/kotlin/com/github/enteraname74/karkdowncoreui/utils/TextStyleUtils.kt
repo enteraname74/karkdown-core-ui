@@ -1,0 +1,39 @@
+package com.github.enteraname74.karkdowncoreui.utils
+
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.text.TextStyle
+import com.github.enteraname74.karkdowncore.textutils.headerLevel
+import com.github.enteraname74.karkdowncore.textutils.isHeader
+import com.github.enteraname74.karkdowncoreui.theme.KarkdownCoreUiTheme
+
+/**
+ * Build a corresponding text style from a given line.
+ */
+@Composable
+fun buildCorrespondingTextStyle(
+    line: String
+): TextStyle {
+    return if (line.isHeader())
+        buildCorrespondingHeaderTextStyle(line.headerLevel())
+    else
+        KarkdownCoreUiTheme.typography.body
+}
+
+/**
+ * Build a corresponding header text style from a header level.
+ */
+@Composable
+private fun buildCorrespondingHeaderTextStyle(
+    headerLevel: Int
+): TextStyle {
+    return with(KarkdownCoreUiTheme.typography) {
+        when (headerLevel) {
+            1 -> h1
+            2 -> h2
+            3 -> h3
+            4 -> h4
+            5 -> h5
+            else -> h6
+        }
+    }
+}

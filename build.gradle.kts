@@ -1,6 +1,7 @@
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.compose.compiler)
 }
 
 kotlin {
@@ -8,6 +9,7 @@ kotlin {
 }
 
 version = "0.1.0"
+group = "com.github.enteraname74.karkdowncoreui"
 
 repositories {
     google()
